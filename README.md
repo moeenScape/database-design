@@ -12,6 +12,7 @@ CREATE TABLE user_profile
     gender     ENUM ('MALE', 'FEMALE') CHECK (gender IN ('MALE', 'FEMALE')),
     created_at TIMESTAMP           NOT NULL
 );
+
 create table if not exists youtube_account
 (
     user_profile_id BIGINT PRIMARY KEY REFERENCES user_profile (id),
